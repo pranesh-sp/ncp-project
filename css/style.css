@@ -100,7 +100,8 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  
+  background-color: #fff2e3;
 }
 
 [tabindex="-1"]:focus {
@@ -117,7 +118,7 @@ hr {
 .hero-wrap {
   width: 100%;
   height: calc(100vh - 117px);
-  min-height: 700px;
+  min-height: 600px;
   position: relative;
 }
 .hero-wrap.hero-wrap-2 {
@@ -299,6 +300,10 @@ hr {
 #section-counter {
   position: relative;
   z-index: 0;
+}
+footer{
+  color: orange;
+  background-color: rgb(20, 20, 20);
 }
 
 
