@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+@import url(https://fonts.googleapis.com/css?family=Anonymous + Pro);
 
 :root {
   --blue: #007bff;
@@ -101,7 +101,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  
+
   background-color: #fff2e3;
 }
 
@@ -256,7 +256,6 @@ hr {
   font-size: 16px;
   letter-spacing: 0.1em;
 }
-
 
 .navbar-brand {
   font-weight: 700;
