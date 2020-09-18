@@ -7,10 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Volunteer sign up</title>
 
-   
-
     <!-- Main css -->
     <link rel="stylesheet" href="css/vol-new.css">
+
+    <!-- from the og -->
+
+    <link rel="stylesheet" href="css/style-og.css">
+
+    <!-- end == from the og -->
+
 </head>
 
 <body>
@@ -24,16 +29,19 @@
 
 
                 <div class="signup-form">
-                    <form method="POST" class="register-form" id="register-form">
+
+                    <!-- start form -->
+                    <form method="POST" class="register-form" id="register-form" name="register-form"
+                        onSubmit="return(volnew());">
                         <h2>Volunteer registration form</h2>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="fname">First Name :</label>
-                                <input type="text" name="fname" id="fname" required />
+                                <input type="text" name="fname" id="fname" />
                             </div>
                             <div class="form-group">
                                 <label for="lname">Last Name :</label>
-                                <input type="text" name="lname" id="lname" required />
+                                <input type="text" name="lname" id="lname" />
                             </div>
                         </div>
 
@@ -53,52 +61,52 @@
 
                         <div class="form-group">
                             <label for="birth_date">DOB :</label>
-                            <input type="date" name="birth_date" id="birth_date" required>
+                            <input type="date" name="birth_date" id="birth_date">
                         </div>
 
                         <div class="form-group">
                             <label for="email">Email ID :</label>
-                            <input type="email" name="email" id="email" required/>
+                            <input type="email" name="email" id="email" />
                         </div>
 
                         <div class="form-group">
                             <label for="address">Address :</label>
-                            <input type="text" name="address" id="address" required />
+                            <input type="text" name="address" id="address" />
                         </div>
 
                         <div class="form-row">
 
                             <div class="form-group">
                                 <label for="state">State :</label>
-                                <input type="text" name="state" id="state" required />
+                                <input type="text" name="state" id="state" />
                             </div>
 
                             <div class="form-group">
                                 <label for="city">City :</label>
-                                <input type="text" name="city" id="city" required />
+                                <input type="text" name="city" id="city" />
                             </div>
 
 
                             <div class="form-group">
                                 <label for="pincode">Pincode :</label>
-                                <input type="number" name="pincode" id="pincode" required>
+                                <input type="number" name="pincode" id="pincode">
                             </div>
 
                         </div>
 
                         <div class="form-group">
                             <label for="message">Why would you like to join us ?</label>
-                            <textarea cols="60" rows="10" id="message" name="message" required></textarea>
-                          </div>
+                            <textarea cols="60" rows="10" id="message" name="message"></textarea>
+                        </div>
 
 
-                        
+
                         <div class="form-submit">
                             <input type="reset" value="Reset All" class="submit" name="reset" id="reset" />
-                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit"
-                                action="#" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
                         </div>
                     </form>
+                    <!-- end form  -->
                 </div>
 
 
@@ -107,8 +115,10 @@
 
     </div>
 
+
+
     <!-- JS -->
-    <!-- <script src="js/vol-new.js"></script> -->
+    <script src="js/vol-new.js"></script>
 </body>
 
 </html>
