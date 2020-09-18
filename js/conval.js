@@ -29,10 +29,10 @@ function conval() {
         document.conForm.message.focus();
         return false;
     }
-
-
-
-
-
+    
+    
+    
+    
+    
     return true;
 }

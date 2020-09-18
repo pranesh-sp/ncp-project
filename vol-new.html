@@ -31,8 +31,8 @@
                 <div class="signup-form">
 
                     <!-- start form -->
-                    <form method="POST" class="register-form" id="register-form" name="register-form"
-                        onSubmit="return(volnew());">
+                    <!-- <form method="POST" class="register-form" id="register-form" name="register-form" onSubmit="return(volnew());"> -->
+                        <form method="POST" class="register-form" id="register-form" name="register-form" >
                         <h2>Volunteer registration form</h2>
                         <div class="form-row">
                             <div class="form-group">
@@ -103,7 +103,7 @@
 
                         <div class="form-submit">
                             <input type="reset" value="Reset All" class="submit" name="reset" id="reset" />
-                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" onclick="return(volnew());"/>
                         </div>
                     </form>
                     <!-- end form  -->
@@ -118,7 +118,7 @@
 
 
     <!-- JS -->
-    <script src="js/vol-new.js"></script>
+    <script src="js/volnew.js"></script>
 </body>
 
 </html>
