@@ -28,6 +28,7 @@
 
   <!-- end == from the og -->
 
+  <script src="js/conval.js"></script>
 
 
 
@@ -98,7 +99,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <form action="#" method="post" class="probootstrap-form">
+            <!-- form start -->
+              <form name="conForm" method="post" class="probootstrap-form" onSubmit="return(conval());">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
@@ -129,6 +131,7 @@
                 <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
               </div>
             </form>
+            <!-- form end -->
           </div>
           <div class="col-md-5 col-md-push-1">
             <h3 class="mt0">Get In Touch</h3>
