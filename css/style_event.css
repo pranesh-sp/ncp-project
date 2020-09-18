@@ -45,7 +45,6 @@ hr {
   position: relative;
   left: 0;
   right: 0;
-  z-index: 3;
   top: 0px;
 }
 @media (max-width: 991.98px) {
@@ -188,5 +187,27 @@ footer{
   background-color: #0000FF;
  }
 
- 
+.box .bb{
+    float: right;
+    color: #fff6eb;
+    background-color: #0000FF;
+    display: inline-block;
+   font-weight: bold;
+   padding: 8px 10px;
+   border-radius: 12px;
+   margin-top: 3px;
+}
 
+.sub {
+   color: #fff6eb; 
+    background-color: #0000FF;
+    display: inline-block;
+   font-weight: bold;
+   padding: 8px 10px;
+   border-radius: 12px;
+   margin-top: 3px;
+}
+
+.g{
+    padding-right: 30px;
+}
