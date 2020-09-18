@@ -213,13 +213,20 @@ function validation()
     document.getElementById('ename').innerHTML = " **Only Characters are allowed** ";
     return false; 
   }
-  else if(email == "")
+  var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if(email == "")
   {
     document.getElementById('emailids').innerHTML = " **Please fill the Email id field** ";
     return false;
   }
-
-  else if(address == "")
+  if(email.match(mailformat))
+  {
+   return true;
+  }
+  else{
+    document.getElementById('emailids').innerHTML = " **Please enter valid Email id** ";
+  }
+  if(address == "")
   {
     document.getElementById('add').innerHTML = " **Please fill the Address field** ";
     return false;
