@@ -184,13 +184,13 @@ footer{
  }
 
  .box.showcontent a.readmore{
-  background-color: #0000FF;
+  background-color: orange;
  }
 
 .box .bb{
     float: right;
     color: #fff6eb;
-    background-color: #0000FF;
+    background-color: orange;
     display: inline-block;
    font-weight: bold;
    padding: 8px 10px;
@@ -200,11 +200,11 @@ footer{
 
 .sub {
    color: #fff6eb; 
-    background-color: #0000FF;
+    background-color:  orange;
     display: inline-block;
    font-weight: bold;
    padding: 8px 10px;
-   border-radius: 12px;
+   /* border-radius: 12px; */
    margin-top: 3px;
 }
 
