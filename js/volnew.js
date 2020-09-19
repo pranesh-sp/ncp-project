@@ -25,10 +25,6 @@ if (document.register-form.birth_date.value == "") {
   return false;
 }
   
-
-
-
-
 return true;
 
 

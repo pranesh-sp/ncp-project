@@ -24,7 +24,7 @@
         <div class="container">
             <div class="signup-content">
                 <div class="signup-img">
-                    <img src="img/signup-img.jpg" alt="">
+                    <img src="img/work_6.jpg" alt="">
                 </div>
 
 
@@ -32,7 +32,7 @@
 
                     <!-- start form -->
                     <!-- <form method="POST" class="register-form" id="register-form" name="register-form" onSubmit="return(volnew());"> -->
-                        <form method="POST" class="register-form" id="register-form" name="register-form" >
+                    <form method="POST" class="register-form" id="register-form" name="register-form">
                         <h2>Volunteer registration form</h2>
                         <div class="form-row">
                             <div class="form-group">
@@ -103,7 +103,9 @@
 
                         <div class="form-submit">
                             <input type="reset" value="Reset All" class="submit" name="reset" id="reset" />
-                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" onclick="return(volnew());"/>
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit"
+                                onclick="return validateForm();" />
+                            <!-- <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" /> -->
                         </div>
                     </form>
                     <!-- end form  -->
@@ -115,7 +117,103 @@
 
     </div>
 
+    <script type="text/javascript">
+        function validateForm() {
+            if (isEmpty(document.getElementById('fname').value.trim()) &&
+                isEmpty(document.getElementById('lname').value.trim()) &&
+                isEmpty(document.getElementById('birth_date').value.trim()) &&
+                isEmpty(document.getElementById('email').value.trim()) &&
+                isEmpty(document.getElementById('address').value.trim()) &&
+                isEmpty(document.getElementById('state').value.trim()) &&
+                isEmpty(document.getElementById('city').value.trim()) &&
+                isEmpty(document.getElementById('pincode').value.trim()) &&
+                isEmpty(document.getElementById('message').value.trim())) {
+                alert('Fill the details');
+                return false;
+            }
+            else {
+                if (isEmpty(document.getElementById('fname').value.trim())) {
+                    alert('First name is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('lname').value.trim())) {
+                    alert('Last name is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('birth_date').value.trim())) {
+                    alert('birth_date is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('email').value.trim())) {
+                    alert('email is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('address').value.trim())) {
+                    alert('address is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('state').value.trim())) {
+                    alert('state is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('city').value.trim())) {
+                    alert('city is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('pincode').value.trim())) {
+                    alert('pincode is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('message').value.trim())) {
+                    alert('SOP is required!');
+                    return false;
+                }
 
+
+                if (!validateName(document.getElementById('fname').value.trim())) {
+                    alert('First name must be a valid!');
+                    return false;
+                }
+                if (!validateName(document.getElementById('lname').value.trim())) {
+                    alert('Last name must be a valid!');
+                    return false;
+                }
+                if (!validateEmail(document.getElementById('email').value.trim())) {
+                    alert('Email must be a valid email address!');
+                    return false;
+                }
+                // if (!validateName(document.getElementById('state').value.trim())) {
+                //     alert('state must be valid!');
+                //     return false;
+                // }
+                // if (!validateName(document.getElementById('city').value.trim())) {
+                //     alert('city must be  valid!');
+                //     return false;
+                // }
+
+                alert("Registered!!");
+                return true;
+            }
+        }
+
+        function isEmpty(str) {
+            return (str.length === 0 || !str.trim());
+        }
+
+        function validateEmail(email) {
+            var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+            return isEmpty(email) || re.test(email);
+        }
+
+        function validateName(name) {
+            var re = /^[A-Za-z]+$/;
+            return isEmpty(name) || re.test(name);
+        }
+        // function closeWin() {
+        //     myWindow.close();   // Closes the new window
+        // }
+
+    </script>
 
     <!-- JS -->
     <script src="js/volnew.js"></script>
