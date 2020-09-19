@@ -28,6 +28,7 @@
 
   <!-- end == from the og -->
 
+  <script src="js/conval.js"></script>
 
 
 
@@ -98,37 +99,39 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <form action="#" method="post" class="probootstrap-form">
+            <!-- form start -->
+              <form name="conForm" method="post" class="probootstrap-form" onSubmit="return(conval());">
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="fname">First Name</label>
-                    <input type="text" class="form-control" id="fname" name="fname">
+                    <input type="text" class="form-control" id="fname" name="fname" >
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
                     <label for="lname">Last Name</label>
-                    <input type="text" class="form-control" id="lname" name="lname">
+                    <input type="text" class="form-control" id="lname" name="lname" >
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email" name="email" >
               </div>
               <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" class="form-control" id="subject" name="subject">
+                <input type="text" class="form-control" id="subject" name="subject" >
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
+                <textarea cols="30" rows="10" class="form-control" id="message" name="message" ></textarea>
               </div>
               <div class="form-group">
                 <input type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Message">
               </div>
             </form>
+            <!-- form end -->
           </div>
           <div class="col-md-5 col-md-push-1">
             <h3 class="mt0">Get In Touch</h3>
@@ -196,7 +199,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="" style="color: antiquewhite;"> The OG NGO</a>
+      <a href="" style="color: antiquewhite;"> The OG NGO / Viswesh Ram</a>
     </div>
     <!-- Copyright -->
 

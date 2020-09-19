@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Volunteer sign up</title>
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/vol-new.css">
+
+    <!-- from the og -->
+
+    <link rel="stylesheet" href="css/style-og.css">
+
+    <!-- end == from the og -->
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-img">
+                    <img src="img/work_6.jpg" alt="">
+                </div>
+
+
+                <div class="signup-form">
+
+                    <!-- start form -->
+                    <!-- <form method="POST" class="register-form" id="register-form" name="register-form" onSubmit="return(volnew());"> -->
+                    <form method="POST" class="register-form" id="register-form" name="register-form">
+                        <h2>Volunteer registration form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fname">First Name :</label>
+                                <input type="text" name="fname" id="fname" />
+                            </div>
+                            <div class="form-group">
+                                <label for="lname">Last Name :</label>
+                                <input type="text" name="lname" id="lname" />
+                            </div>
+                        </div>
+
+                        <div class="form-radio" required>
+                            <label for="gender" class="radio-label">Non binary and identifying :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male">
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birth_date">DOB :</label>
+                            <input type="date" name="birth_date" id="birth_date">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email ID :</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address" />
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="state">State :</label>
+                                <input type="text" name="state" id="state" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <input type="text" name="city" id="city" />
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="pincode">Pincode :</label>
+                                <input type="number" name="pincode" id="pincode">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Why would you like to join us ?</label>
+                            <textarea cols="60" rows="10" id="message" name="message"></textarea>
+                        </div>
+
+
+
+                        <div class="form-submit">
+                            <input type="reset" value="Reset All" class="submit" name="reset" id="reset" />
+                            <input type="submit" value="Submit Form" class="submit" name="submit" id="submit"
+                                onclick="return validateForm();" />
+                            <!-- <input type="submit" value="Submit Form" class="submit" name="submit" id="submit" /> -->
+                        </div>
+                    </form>
+                    <!-- end form  -->
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        function validateForm() {
+            if (isEmpty(document.getElementById('fname').value.trim()) &&
+                isEmpty(document.getElementById('lname').value.trim()) &&
+                isEmpty(document.getElementById('birth_date').value.trim()) &&
+                isEmpty(document.getElementById('email').value.trim()) &&
+                isEmpty(document.getElementById('address').value.trim()) &&
+                isEmpty(document.getElementById('state').value.trim()) &&
+                isEmpty(document.getElementById('city').value.trim()) &&
+                isEmpty(document.getElementById('pincode').value.trim()) &&
+                isEmpty(document.getElementById('message').value.trim())) {
+                alert('Fill the details');
+                return false;
+            }
+            else {
+                if (isEmpty(document.getElementById('fname').value.trim())) {
+                    alert('First name is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('lname').value.trim())) {
+                    alert('Last name is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('birth_date').value.trim())) {
+                    alert('birth_date is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('email').value.trim())) {
+                    alert('email is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('address').value.trim())) {
+                    alert('address is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('state').value.trim())) {
+                    alert('state is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('city').value.trim())) {
+                    alert('city is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('pincode').value.trim())) {
+                    alert('pincode is required!');
+                    return false;
+                }
+                if (isEmpty(document.getElementById('message').value.trim())) {
+                    alert('SOP is required!');
+                    return false;
+                }
+
+
+                if (!validateName(document.getElementById('fname').value.trim())) {
+                    alert('First name must be a valid!');
+                    return false;
+                }
+                if (!validateName(document.getElementById('lname').value.trim())) {
+                    alert('Last name must be a valid!');
+                    return false;
+                }
+                if (!validateEmail(document.getElementById('email').value.trim())) {
+                    alert('Email must be a valid email address!');
+                    return false;
+                }
+                // if (!validateName(document.getElementById('state').value.trim())) {
+                //     alert('state must be valid!');
+                //     return false;
+                // }
+                // if (!validateName(document.getElementById('city').value.trim())) {
+                //     alert('city must be  valid!');
+                //     return false;
+                // }
+
+                alert("Registered!!");
+                return true;
+            }
+        }
+
+        function isEmpty(str) {
+            return (str.length === 0 || !str.trim());
+        }
+
+        function validateEmail(email) {
+            var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+            return isEmpty(email) || re.test(email);
+        }
+
+        function validateName(name) {
+            var re = /^[A-Za-z]+$/;
+            return isEmpty(name) || re.test(name);
+        }
+        // function closeWin() {
+        //     myWindow.close();   // Closes the new window
+        // }
+
+    </script>
+
+    <!-- JS -->
+    <script src="js/volnew.js"></script>
+</body>
+
+</html>
